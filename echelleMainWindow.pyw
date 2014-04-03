@@ -140,7 +140,7 @@ if __name__ == '__main__':
     if (PyZDDEPath == 'NULL'):
         window = QtGui.QLabel('Specify PyZDDE path!!')
     else:
-        if PyZDDEPath not in sys.path:
+        if (PyZDDEPath not in sys.path):
             sys.path.append(PyZDDEPath)
         
         import pyzdde.zdde as pyz
