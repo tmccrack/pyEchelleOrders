@@ -21,19 +21,9 @@ import numpy as np
 from PyQt4 import QtGui
 from echelleDesignerWindow import *  # Made from pyuic4
 
-
-PyZDDEPath = 'C:\Users\TMM\Downloads\Python\PyZDDE\PyZDDE'  # Path to PyZDDE
-
-if PyZDDEPath not in sys.path:
-    sys.path.append(PyZDDEPath)
-
-import pyzdde.zdde as pyz
-import pyzdde.zcodes.zemaxoperands as zo # if required. (use pyz.zo to access module functions)
-import pyzdde.zcodes.zemaxbuttons  as zb # if required. (use pyz.zb to access module functions)
-
+PyZDDEPath = 'NULL'  # Path to PyZDDE
 
 RAD = np.pi / 180.  # degrees to radians
-
 
 '''
 ###
@@ -147,8 +137,17 @@ class mainWindow(QtGui.QMainWindow):
 
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
-    window = mainWindow()
+    if (PyZDDEPath == 'NULL'):
+        window = QtGui.QLabel('Specify PyZDDE path!!')
+    else:
+        if PyZDDEPath not in sys.path:
+            sys.path.append(PyZDDEPath)
+        
+        import pyzdde.zdde as pyz
+        import pyzdde.zcodes.zemaxoperands as zo # if required. (use pyz.zo to access module functions)
+        import pyzdde.zcodes.zemaxbuttons  as zb # if required. (use pyz.zb to access module functions)
+        window = mainWindow()
+        
     window.show()
     sys.exit(app.exec_())
-    
     
