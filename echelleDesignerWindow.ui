@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>765</width>
+    <height>192</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBoxInputs">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>296</width>
+      <height>170</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Inputs</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayoutInputs">
+       <item>
+        <layout class="QGridLayout" name="gridLayoutWavelengths">
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="textLambdaMin">
+           <property name="inputMethodHints">
+            <set>Qt::ImhDigitsOnly</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="labelLambdaMax">
+           <property name="text">
+            <string>Lambda_max [microns]</string>
+           </property>
+           <property name="buddy">
+            <cstring>textLambdaMax</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLineEdit" name="textLambdaMax">
+           <property name="inputMethodHints">
+            <set>Qt::ImhDigitsOnly</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="labelLambdaMin">
+           <property name="text">
+            <string>&amp;Lambda_min [microns]</string>
+           </property>
+           <property name="buddy">
+            <cstring>textLambdaMin</cstring>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayoutAngles">
+         <item row="0" column="1">
+          <widget class="QLabel" name="labelOutAngle_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>in-plane angle [degrees]</string>
+           </property>
+           <property name="buddy">
+            <cstring>textInAngle</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="textOutAngle">
+           <property name="inputMethodHints">
+            <set>Qt::ImhDigitsOnly</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="labelOutAngle">
+           <property name="text">
+            <string>out-of-plane angle [degrees]</string>
+           </property>
+           <property name="buddy">
+            <cstring>textOutAngle</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="textInAngle">
+           <property name="inputMethodHints">
+            <set>Qt::ImhDigitsOnly</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayoutGrating">
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelGroovesMm">
+           <property name="text">
+            <string>&amp;grooves/mm</string>
+           </property>
+           <property name="buddy">
+            <cstring>textGroovesMm</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="labelBlaze">
+           <property name="text">
+            <string>&amp;blaze angle [degrees]</string>
+           </property>
+           <property name="buddy">
+            <cstring>textBlaze</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="textBlaze"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="textGroovesMm"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxOutputs">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>10</y>
+      <width>433</width>
+      <height>74</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Orders</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <layout class="QGridLayout" name="gridLayoutOrders">
+       <item row="0" column="2">
+        <widget class="QLabel" name="labelMaxOrder">
+         <property name="text">
+          <string>Maximum</string>
+         </property>
+         <property name="buddy">
+          <cstring>textOrderMax</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="labelMinOrder">
+         <property name="text">
+          <string>Minimum</string>
+         </property>
+         <property name="buddy">
+          <cstring>textOrderMin</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelNumberOrders">
+         <property name="text">
+          <string>Number</string>
+         </property>
+         <property name="buddy">
+          <cstring>textOrders</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="textOrders"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="textOrderMin"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLineEdit" name="textOrderMax"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButtonUpdate">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>90</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;Update</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSelectFile">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>90</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;Select file</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFileName">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>120</y>
+      <width>421</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="buddy">
+     <cstring>pushButtonSelectFile</cstring>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>textLambdaMin</tabstop>
+  <tabstop>textLambdaMax</tabstop>
+  <tabstop>textInAngle</tabstop>
+  <tabstop>textOutAngle</tabstop>
+  <tabstop>textGroovesMm</tabstop>
+  <tabstop>textBlaze</tabstop>
+  <tabstop>pushButtonSelectFile</tabstop>
+  <tabstop>pushButtonUpdate</tabstop>
+  <tabstop>textOrders</tabstop>
+  <tabstop>textOrderMin</tabstop>
+  <tabstop>textOrderMax</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButtonUpdate</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>542</x>
+     <y>171</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>441</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonSelectFile</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>selectFileClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>495</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>402</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>updateClicked()</slot>
+  <slot>selectFileClicked()</slot>
+ </slots>
+</ui>
