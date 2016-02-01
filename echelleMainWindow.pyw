@@ -87,7 +87,9 @@ class mainWindow(QtGui.QMainWindow):
         m = np.arange(self.orderMin, self.orderMax+1, 1, dtype=np.double)
         lambda_center = c1 / m
         d_lambda = lambda_center / m
-        spacing = np.array([-0.5, -0.25, 0.0, 0.25, 0.5])
+        #spacing = np.array([-0.5, -0.25, 0.0, 0.25, 0.5])
+        step = 0.05
+        spacing = np.arange(-0.5, 0.5 + step, step)
         self.wavs = lambda_center.reshape(lambda_center.size, 1) * np.ones([1, spacing.size]) + d_lambda.reshape(d_lambda.size, 1) * spacing.reshape(1, spacing.size)
             
             
