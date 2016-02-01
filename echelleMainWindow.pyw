@@ -14,6 +14,13 @@
 # Revision:    0.1
 #-------------------------------------------------------------------------------
 
+
+#
+# COLBY, CHANGE THIS NUMBER!!!
+#
+
+steps = 10.0
+
 import sys
 import traceback
 import numpy as np
@@ -88,7 +95,7 @@ class mainWindow(QtGui.QMainWindow):
         lambda_center = c1 / m
         d_lambda = lambda_center / m
         #spacing = np.array([-0.5, -0.25, 0.0, 0.25, 0.5])
-        step = 0.05
+        step = 1/float(steps)
         spacing = np.arange(-0.5, 0.5 + step, step)
         self.wavs = lambda_center.reshape(lambda_center.size, 1) * np.ones([1, spacing.size]) + d_lambda.reshape(d_lambda.size, 1) * spacing.reshape(1, spacing.size)
             
